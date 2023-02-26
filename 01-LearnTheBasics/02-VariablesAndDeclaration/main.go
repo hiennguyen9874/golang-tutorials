@@ -38,4 +38,23 @@ func main() {
 	fmt.Println(int64(g))
 
 	fmt.Println(math.Sin(n))
+
+	var (
+		name    string
+		address string
+		age     int
+	)
+	name = "Hien"
+	address = "Viet nam"
+	age = 1
+
+	fmt.Println(name)
+	fmt.Println(address)
+	fmt.Println(age)
+
+	var name2, address2, age2 = "Hien", "Vietnam", 1
+
+	fmt.Println(name2)
+	fmt.Println(address2)
+	fmt.Println(age2)
 }

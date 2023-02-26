@@ -9,6 +9,7 @@ func add(x int, y int) {
 	fmt.Println(total)
 }
 
+// Function with return value
 func plus(a int, b int) int {
 	return a + b
 }

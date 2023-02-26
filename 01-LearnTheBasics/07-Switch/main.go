@@ -33,6 +33,19 @@ func main() {
 		fmt.Println("It's after noon")
 	}
 
+	switch today := time.Now(); {
+	case today.Day() < 5:
+		fmt.Println("Clean your house.")
+	case today.Day() <= 10:
+		fmt.Println("Buy some wine.")
+	case today.Day() > 15:
+		fmt.Println("Visit a doctor.")
+	case today.Day() == 25:
+		fmt.Println("Buy some food.")
+	default:
+		fmt.Println("No information available for that day.")
+	}
+
 	whatAmI := func(i interface{}) {
 		switch t := i.(type) {
 		case bool:
@@ -46,4 +59,27 @@ func main() {
 	whatAmI(true)
 	whatAmI(1)
 	whatAmI("hey")
+
+	number := 10
+	switch number {
+	case 1:
+		fmt.Println("number = 1")
+		fallthrough
+	case 10:
+		// if number == 10 {
+		// 	fmt.Println("break")
+		// 	break
+		// }
+		if number == 10 {
+			fmt.Println("goto 2")
+			goto alo
+		}
+		fmt.Println("number = 10")
+	alo:
+		fmt.Println("handle for case = 2")
+		fallthrough
+
+	case 2:
+		fmt.Println("number = 2")
+	}
 }
