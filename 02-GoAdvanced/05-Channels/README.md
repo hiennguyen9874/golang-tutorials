@@ -19,3 +19,4 @@ Channels are the pipes that connect concurrent goroutines. You can send values i
 - Unidirectional channels
 - Closing channels
 - For range loops on channels
+- Channel buffering

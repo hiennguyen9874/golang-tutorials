@@ -60,4 +60,10 @@ func main() {
 	for v := range ch2 {
 		fmt.Println("Received: ", v)
 	}
+
+	ch3 := make(chan string, 2)
+	ch3 <- "buffered"
+	ch3 <- "channel"
+	fmt.Println(<-ch3)
+	fmt.Println(<-ch3)
 }
